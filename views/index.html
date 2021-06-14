@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{title}}</title>
+
+  <link rel="stylesheet" href=stylesheets/game.css>
+  <link rel="stylesheet" href=stylesheets/login.css>
+</head>
+
+<body>
+
+<div id="gameAreaWrapper">
+  <div class="panel game-msg" id="game-msg"><p id="position"></p></div>
+  <div class="panel game-sort">
+    <img class="icon" src=images/ranking.svg alt="ranking">
+    <ul id="game-sort-ul">
+    </ul>
+  </div>
+  <div class="panel game-chat">
+    <div id="game-chat-main"></div>
+    <input placeholder="input to say something" id="game-chat-input">
+  </div>
+  <canvas id="gameCanvas"></canvas>
+  <div class="panel game-dead">
+    <img src=images/dead.svg alt="dead-icon" class="icon-lg">
+    <p>YOU ARE DEAD!</p>
+  </div>
+</div>
+
+<div id="startMenuWrapper">
+  <div id="startMenu">
+    <h2>Agar Clone</h2>
+    <input type="text" tabindex="0" autofocus placeholder="Enter your name here" id="playerNameInput" maxlength="25" />
+    <button id="startButton">Play</button>
+  </div>
+</div>
+
+</body>
+
+<script src=/socket.io/socket.io.js></script>
+<script src=javascripts/jquery-3.2.1.js></script>
+<script src=javascripts/bin/client.js></script>
+
+</html>
